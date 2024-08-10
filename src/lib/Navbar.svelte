@@ -3,7 +3,7 @@
     import {Router,Route,Link} from 'svelte-routing';
     import Home from "./Home.svelte";
     import Blog from "./Blog.svelte";
-    import Members from "./Members.svelte";
+
     import Projects from "./Projects.svelte";
     import About from "./About.svelte";
 
@@ -12,8 +12,7 @@
         {name:"Home", href:"/",id:0},
         {name:"Projects", href:"/projects",id:1},
         {name:"Blog", href:"/blog",id:2},
-        {name:"Members", href:"/members",id:3},
-        {name:"About", href:"/about",id:4},
+        {name:"About", href:"/about",id:3},
     ]
 </script>
 <main>
@@ -29,7 +28,6 @@
         <Route path="/" component="{Home}"/>
         <Route path="/projects" component="{Projects}"/>
         <Route path="/blog" component="{Blog}"/>
-        <Route path="/members" component="{Members}"/>
         <Route path="/about" component="{About}"/>
     </Router>
 </main>
