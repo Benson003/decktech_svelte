@@ -14,10 +14,10 @@
     ]
 </script>
 <main>
-    <div class="container">
-        <ul class="">
+    <div class= "mx-0 static top-0 left-0  bg-cyan-700">
+        <ul class=" flex flex-col md:flex-row">
             {#each customLinks as link (link.id)}
-                <li class=""><a href="{link.href}">{link.name}</a></li>
+                <li class="w-full md:flex-auto h-12 border-solid border-blue-700 border-2 text-center text-cyan-300"><a href="{link.href}">{link.name}</a></li>
             {/each}
         </ul>
     </div>

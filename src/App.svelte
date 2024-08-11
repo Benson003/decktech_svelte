@@ -4,7 +4,7 @@ import "./app.css";
 
 </script>
 
-<main>
+<main class="mx-0 px-0">
 
   <Navbar />
 
