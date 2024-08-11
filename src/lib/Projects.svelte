@@ -26,20 +26,29 @@
 
         table = tempTable;
     }
-
+    export let identifier; 
     onMount(async ()=>{
         await fetchData()
+       
+        let div = document.getElementById("clicked")
+        div.addEventListener('click',(e)=>{
+        let tag = e.target.dataset.id;
+        identifier = tag;
     });
+
+});
+
+
 
 </script>
 <main>
     <Block />
     <h1>Projects Site</h1>
     {#each table as project (project.id)}
-    <div>
-        <img src="{project.projectImage}" alt="Resourse not found">
-         <h3>{project.title }</h3>
-         <p>{project.content}</p>
+    <div class = "container w-1/6 h-1/3 m-4 rounded-md bg-slate-300 p-3" id = "clicked" >
+         <img src="{project.projectImage}" alt="Resourse not found" class=" aspect-[4/3] md:aspect-[16/9] rounded" data-id={project.id}>
+         <h3 class="font-bold" data-id="{project.id}">{project.title }</h3>
+         <p data-id="{project.id}">{project.content}</p>
     </div>
     {/each}
 
