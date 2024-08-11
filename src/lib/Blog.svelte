@@ -1,6 +1,7 @@
 <script>
     import PocketBase from "pocketbase";
-  import { onMount } from "svelte";
+    import { onMount } from "svelte";
+    import Block from "./block.svelte";
 
     const pb = new PocketBase("http://127.0.0.1:8090");
     let table = [];
@@ -27,6 +28,8 @@
     });
 </script>
 <main>
+    <Block />
+    
     <h1>Blog Site</h1>
 
 {#each table as blog (blog.id)}

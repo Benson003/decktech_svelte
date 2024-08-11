@@ -1,5 +1,6 @@
 <script>
 import Navbar from "./lib/Navbar.svelte"
+import "./app.css";
 
 </script>
 
@@ -7,8 +8,8 @@ import Navbar from "./lib/Navbar.svelte"
 
   <Navbar />
 
+
 </main>
 
 <style>
-
 </style>

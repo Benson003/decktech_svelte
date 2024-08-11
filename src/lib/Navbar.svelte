@@ -1,9 +1,7 @@
 <script>
-    import "./Navbar.css"
     import {Router,Route,Link} from 'svelte-routing';
     import Home from "./Home.svelte";
     import Blog from "./Blog.svelte";
-
     import Projects from "./Projects.svelte";
     import About from "./About.svelte";
 
@@ -17,9 +15,9 @@
 </script>
 <main>
     <div class="container">
-        <ul class="navbar">
+        <ul class="">
             {#each customLinks as link (link.id)}
-                <li class="nav_link"><a href="{link.href}">{link.name}</a></li>
+                <li class=""><a href="{link.href}">{link.name}</a></li>
             {/each}
         </ul>
     </div>
